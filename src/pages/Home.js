@@ -62,7 +62,6 @@ export function Home() {
                 renderItem={({ item })=> <SkillCard  skill={item} />}
                 showsVerticalScrollIndicator={false}
             />
-
         </View>
     )
 }
