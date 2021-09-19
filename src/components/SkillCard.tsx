@@ -2,12 +2,17 @@ import React from "react"
 import {
     TouchableOpacity,
     Text,
-    StyleSheet
+    StyleSheet,
+    TouchableOpacityProps
 } from 'react-native'
 
-export function SkillCard({ skill }) {
+interface SkillCardsProps extends TouchableOpacityProps {
+    skill: string;
+}
+
+export function SkillCard({ skill, ...rest } : SkillCardsProps) {
     return (
-        <TouchableOpacity style={styles.buttonSkill}>
+        <TouchableOpacity style={styles.buttonSkill} {...rest}>
             <Text style={styles.textSkill}>
                 { skill }
             </Text>
